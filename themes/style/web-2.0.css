@@ -498,3 +498,41 @@ a:hover, a:focus {
 .boxshadow .goto-form {
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+
+#test {
+  border: solid 1px black;
+  height: 100px;
+  width: 950px;
+  margin-left: 500px;
+  margin-top: 100px;
+  position: relative;
+}
+
+#animate {
+  border: solid 1px black;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 50px;
+  position: absolute;
+  top: 25px;
+  }
+
+  #animate:hover {
+  -moz-animation-name: test;
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-delay: 2s;
+  -moz-animation-play-state: running;
+  -moz-animation-direction: alternate;
+  -moz-animation-iteration-count: infinite;
+  }
+
+  
+    @-moz-keyframes test {
+    0%   {background: red; left: 0px; top: 25px;}
+    25%  {background: blue; left: 450px; top: 25px;}
+    50%  {background: green; left: 900px; top: 25px;}
+    75%  {background: blue; left: 450px; top: 25px;}
+    100% {background: red; left: 0px; top: 25px;}
+    }
